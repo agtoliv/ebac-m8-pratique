@@ -23,6 +23,12 @@ header h1{
     font-weight: bold;
 }
 
+.container{
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+}
+
 /*.form-padrao{
     display: flex;
     flex-direction: column;
@@ -76,7 +82,7 @@ form button{
 }
 
 table{
-    width: 50%;
+    width: 100%;
     text-align: center;
     margin: 0 auto;
     border-collapse: collapse;
