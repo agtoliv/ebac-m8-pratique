@@ -1,13 +1,19 @@
 const form = document.getElementById("form-principal");
-const nome = document.getElementById("nome");
-const btn = document.getElementById("btn");
+let linhas = '';
 
-form.addEventListener('submit'
-    //colcoar as funções
-);
+form.addEventListener('submit', function(e) {
+    e.preventDefault();
 
-function nomeCompleto(){
-    form = form.includes(innerHTML(" "))? btn.disabled() : btn.avaliable();
-}
+    const inputNomeContato = document.getElementById('nome-contato');
+    const inputTelefone = document.getElementById('telefone-numero');
 
-//// testeee
+    let linha ='<tr>';
+    linha += `<td>${inputNomeContato.value}</td>`;
+    linha += `<td>${inputTelefone.value}</td>`;
+    linha += '</tr>';
+
+    linhas += linha
+
+    const corpoTabela = document.querySelector('tbody');
+    corpoTabela.innerHTML = linhas;
+});
